@@ -15,11 +15,12 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-
- 
-
 }
-
+function generatePassword(){
+  var pLength = parseInt(prompt("Enter valid Password Length (8-128)"))
+  if( pLength < 8 || pLength < 128 || isNaN(pLength)){
+    return "does not meet criteria"
+  }
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
